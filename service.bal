@@ -1,5 +1,4 @@
 import ballerina/http;
-import ballerina/io;
 
 type config record {
     string name;
@@ -14,8 +13,8 @@ service / on new http:Listener(9090) {
 
     // Endpoint to fetch callback names
     resource function get callbackNames() returns string {
-    io:println(data.toString());
     return "";
       
     }
     }
+
