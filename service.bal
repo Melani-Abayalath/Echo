@@ -13,12 +13,7 @@ configurable CallbackEndpoint[] externalCallbacks = ?;
 
 // Main function to process the external callbacks
 public function main() returns error? {
-    // Check if the externalCallbacks are configured
-    if (externalCallbacks is ()) {
-        io:println("No external callbacks are configured.");
-        return;
-    }
-
+  
     // Loop through each CallbackEndpoint and print its properties
     foreach CallbackEndpoint callback in externalCallbacks {
         io:println("Callback Name: " + callback.name);
